@@ -3,7 +3,7 @@ package arrays;
 public class _01_RobotRace {
 	//1. make a main method
 public static void main(String[] args) {
-	Robot
+	Robot[] robots = new Robot[5];
 }
 	//2. create an array of 5 robots.
 
