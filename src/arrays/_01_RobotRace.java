@@ -17,7 +17,7 @@ public class _01_RobotRace {
 		robots[i] = bot;
 		}
 		// 4. make each robot start at the bottom of the screen, side by side, facing up
-		
+		robots.
 		// 5. use another for loop to iterate through the array and make each robot move
 		// a random amount less than 50.
 
