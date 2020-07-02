@@ -30,7 +30,9 @@ public class _01_RobotRace {
 		}
 		// 6. use a while loop to repeat step 5 until a robot has reached the top of the
 		// screen.
-  
+		while (expression) {
+		     statement(s)
+		}
 		// 7. declare that robot is the winner and throw it a party!
 
 		// 8. try different races with different amounts of robots.
