@@ -28,7 +28,7 @@ public class _02_FindTheHiddenButton implements ActionListener{
 	public static void main(String[] args) {
 		new _02_FindTheHiddenButton().start();
 	
-		
+	}
 	
 		
 	
@@ -54,25 +54,32 @@ public class _02_FindTheHiddenButton implements ActionListener{
 			//7. add the ActionListener to each JButton
 		array[i].addActionListener(this);
 			//8. add each JButton to the panel
-		array[i].add(panel);
+		panel.add(array[i]);
 		//9 add the panel to the window
-		panel.add(window);
+		window.add(panel);
 		}
 		//10. call setExtendedState(JFrame.MAXIMIZED_BOTH) on your JFrame object.
 		window.setExtendedState(window.MAXIMIZED_BOTH);
 		//11. set the JFrame to visible.
 		window.setVisible(true);
 		//12. Give the user the instructions for the game.
-		
+		JOptionPane.showMessageDialog(null, "The instructions for the game include that you must find the hidden button amid the rest of the other buttons.");
 		//13. initialize the hiddenButton variable to a random number less than the int created in step 3
-		
+		Random numberGenerator = new Random ();
+	int hiddenButton = numberGenerator.nextInt(j);
+	
 		//14. Set the text of the JButton located at hiddenButton to  "ME"
-
+	array [hiddenButton].setText("Me");
 		//15. Use Thread.sleep(1000); to pause the program.
 		//    Surround it with a try/catch - use Eclipse helper for this
-		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//16. Set the text of the JButton located at hiddenButton to be blank.
-		
+		array[hiddenButton].setText(" ");
 	}
 
 	@Override
@@ -80,7 +87,12 @@ public class _02_FindTheHiddenButton implements ActionListener{
 		JButton buttonClicked = (JButton)e.getSource();
 		
 		//17. if the hiddenButton is clicked, tell the user that they win.
-		
+		if (buttonClicked == array[hiddenButton]) {
+			JOptionPane.showMessageDialog(null, "You are a winner! Congrats!!");
+		}
 		//18. else tell them to try again
+		else {
+			JOptionPane.showMessageDialog(null, "Try again Loser");
+		}
 	}
 }
